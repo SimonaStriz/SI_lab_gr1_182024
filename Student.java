@@ -69,3 +69,30 @@ class Student {
 			return false;
 	}
 }
+
+class Course {
+	private List<Student> students;
+
+	public Course()
+	{
+		students = new ArrayList<>();
+	}
+
+	public void addStudent(String index, String firstName, String lastName, ArrayList<Integer> labPoints)
+	{
+		Student student = new Student(index, firstName, lastName, labPoints);
+		students.add(student);
+	}
+
+	public void addStudent(Student student)
+	{
+		students.add(student);
+	}
+
+	public void removeStudent(Student student)
+	{
+		students.remove(student);
+	}
+
+	
+}
